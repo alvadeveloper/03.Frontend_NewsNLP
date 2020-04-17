@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="navbar">
+                Sentence Checker
+                <br /><br />
+            </div>
+        </header>
+
+        <main>
+            <section >
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <label>Enter a sentence and check if it is negative / positive or subjective / objective</label>
+                    <input id="sentences" type="text" name="input" value="" onblur="onBlur()" placeholder="Please enter a sentences">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            <section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <br />
+                <div id="results">
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/serviceworker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
